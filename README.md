@@ -1,91 +1,208 @@
-📰 Newzly – Real-Time News App
+Here is your **final, polished, app-style README for Newzly** — fully aligned with your other repos.
+Just **copy–paste everything below** into your `README.md`.
 
-A Flutter-based mobile application that delivers real-time breaking news and categorized headlines from trusted global sources. Features a clean, modern interface with smooth navigation and optimized performance.
+---
 
+```markdown
+<!-- HERO -->
+<h1 align="center">📰 Newzly</h1>
+<p align="center">
+  <b>Real-Time News Application built with Flutter</b>
+</p>
 
-🚀 Features
+<p align="center">
+  Live News • Clean UI • Secure API Integration
+</p>
 
-· Top Headlines: Curated breaking news from multiple countries.
-· Categorized News: Browse by category including Technology, Sports, Business, Health, and Entertainment.
-· Search Functionality: Find news articles on any topic.
-· Article Previews: View images, titles, publication dates, and sources without leaving the app.
-· WebView Integration: Seamlessly open full articles in an in-app browser.
-· Theme Support: Built with support for Light and Dark themes.
+<!-- PREVIEW IMAGE (ADD YOUR SCREENSHOT) -->
+<p align="center">
+  <img src="screenshots/home.png" width="80%">
+</p>
 
+---
 
-🛠️ Tech Stack
+## 📱 Overview
 
-· Framework: Flutter
-· Language: Dart
-· API: NewsAPI.org
-· HTTP Requests: http package
-· State Management: Provider / Bloc (State Management)
-· Image Caching: cached_network_image package
-· In-App Browser: webview_flutter package
+**Newzly** is a real-time news application that delivers breaking headlines and categorized news from trusted global sources.
 
+The application is designed with:
+- Fast API-driven architecture  
+- Clean, responsive UI  
+- Secure API handling practices  
 
-🔧 Installation & Setup
+> Built with a focus on **performance, scalability, and security**
 
-1. Get an API Key:
-   · Obtain a free API key from NewsAPI.org.
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/Shehzaad-Dev/Newzly.git
-   cd Newzly
-   ```
-3. Configure API Key:
-   · Create a .env file in the root directory.
-   · Add your API key: NEWS_API_KEY=your_api_key_here
-4. Install dependencies and run:
-   ```bash
-   flutter pub get
-   flutter run
-   ```
+---
 
+## ✨ Features
 
-📁 Project Structure
+### 🌍 News Delivery
+- Real-time top headlines  
+- Multi-country coverage  
+
+---
+
+### 🧭 Categorized Browsing
+- Technology  
+- Sports  
+- Business  
+- Health  
+- Entertainment  
+
+---
+
+### 🔍 Search System
+- Keyword-based article search  
+- Fast and responsive results  
+
+---
+
+### 📄 Article Experience
+- News preview cards (image, title, source, date)  
+- In-app reading via WebView  
+
+---
+
+### 🎨 UI/UX
+- Clean modern interface  
+- Light & Dark theme support  
+- Smooth navigation  
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|------|-----------|
+| Framework | Flutter |
+| Language | Dart |
+| API | NewsAPI |
+| Networking | http |
+| State Management | Provider / Bloc |
+| Image Handling | cached_network_image |
+| WebView | webview_flutter |
+
+---
+
+## 🏗 Architecture
 
 ```
+
 lib/
-├── main.dart                    # Application entry point
-├── models/                      # Data models (Article, NewsResponse)
-├── services/                    # Business logic & API calls
+├── main.dart
+├── models/
+├── services/
 │   └── news_service.dart
-├── screens/                     # Full app screens
-│   ├── home_screen.dart
-│   └── detail_screen.dart
-├── widgets/                     # Reusable UI components
-│   ├── news_card.dart
-│   └── category_list.dart
-├── utils/                       # Constants & helpers
-│   └── constants.dart
-assets/                         # Images, icons, etc.
+├── screens/
+├── widgets/
+├── utils/
+
+````
+
+### Principles
+
+- Layered architecture (UI / Services / Models)  
+- Separation of concerns  
+- Reusable components  
+
+---
+
+## 🔐 Security Implementation
+
+This project follows **secure mobile development practices** aligned with OWASP guidelines:
+
+### ✔ API Key Protection
+- Stored securely in `.env`  
+- Prevents exposure in source code  
+
+---
+
+### ✔ Secure Communication
+- All API calls use HTTPS  
+- Protects against MITM attacks  
+
+---
+
+### ✔ Data Validation
+- Strong typing and structured parsing  
+- Prevents malformed data issues  
+
+---
+
+### ✔ Input Sanitization
+- Safe handling of user search inputs  
+
+---
+
+### ✔ Dependency Security
+- Trusted and maintained packages  
+- Regular update checks  
+
+> Developed with awareness of **OWASP Mobile Security best practices**
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Flutter SDK  
+- Dart SDK  
+- Android Studio / VS Code  
+
+---
+
+### Installation
+
+```bash
+git clone https://github.com/Shehzaad-Dev/Newzly.git
+cd Newzly
+flutter pub get
+flutter run
+````
+
+---
+
+## ⚙️ Environment Setup
+
+Create a `.env` file in the root directory:
+
+```
+NEWS_API_KEY=your_api_key_here
 ```
 
+---
 
-🔒 Security Considerations
+## 📸 Screenshots
 
-This project was developed with a security-first mindset, incorporating practices essential for modern mobile applications:
+```
+/screenshots/home.png
+/screenshots/detail.png
+/screenshots/search.png
+```
 
-· API Key Management: The NewsAPI key is stored securely using environment variables (.env) to prevent exposure in version control. This mitigates the risk of unauthorized API usage and quota theft.
-· Data Validation: All data fetched from the external API is validated and parsed using Dart's strong type system to prevent malformed data from causing runtime exceptions or unexpected behavior.
-· Secure Communication: All network requests are made over HTTPS to ensure end-to-end encryption of news data in transit, protecting against man-in-the-middle (MITM) attacks.
-· Input Sanitization: User inputs, particularly in the search functionality, are sanitized to guard against potential injection attacks targeting the app's UI or the underlying WebView.
-· Dependency Vigilance: Relied on well-maintained, popular packages from pub.dev and regularly checked for updates to avoid incorporating libraries with known vulnerabilities.
+---
 
-Building Newzly provided hands-on experience in integrating third-party APIs securely and understanding the OWASP Mobile Application Security (MAS) guidelines.
+## 🛣 Roadmap
 
+* [ ] Bookmark articles
+* [ ] Offline reading
+* [ ] Push notifications
+* [ ] Advanced filters
+* [ ] Personalized feed
 
-👨‍💻 Developer
+---
 
-Muhammad Shehzad
-Security-Focused Flutter Developer | AppSec Enthusiast
+## 👨‍💻 Developer
 
-· 📧 Email: shehzadwazir911@gmail.com
-· 💼 LinkedIn: muhammadshehzad-dev
-· 🐙 GitHub: Shehzaad-Dev
+**Muhammad Shehzad**
+Security-Focused Flutter Developer
 
-Open to: Cybersecurity & Application Security Internships
+📧 [shehzadwazir911@gmail.com](mailto:shehzadwazir911@gmail.com)
+💼 [https://www.linkedin.com/in/muhammadshehzad-dev/](https://www.linkedin.com/in/muhammadshehzad-dev/)
+🐙 [https://github.com/Shehzaad-Dev](https://github.com/Shehzaad-Dev)
 
+---
 
-⭐ If you find this project useful, please give it a star on GitHub!
+<p align="center">
+  ⭐ Star this repo if you found it useful
+</p>
